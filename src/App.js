@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import Form from './components/Form';
 import axios from 'axios'
+import Song from './components/Song';
 
 function App () {
   const [searchLyrics, setSearchLyrics] = useState({})
@@ -24,6 +25,16 @@ function App () {
   return (
     <>
       <Form setSearchLyrics={setSearchLyrics}></Form>
+      <div className="container mt-5">
+        <div className="row">
+          <div className="col-md-6">
+            Artist
+          </div>
+          <div className="col-md-6">
+            <Song song={song} />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
