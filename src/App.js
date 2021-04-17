@@ -26,7 +26,7 @@ function App () {
       artistInfo.data.artists && setArtist(artistInfo.data.artists[0])
     }
     getLyrics()
-  }, [searchLyrics])
+  }, [searchLyrics, artist])
 
 
   return (
